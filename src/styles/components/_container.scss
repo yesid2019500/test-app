@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+ background: lighten($color: $dark-grey, $amount: 50);
+
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+h1, h2 {
+  color: $primary;
+  font-family:sans-serif;
+}
+
+
+/* boton */
+.btn {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Helvetica', sans-serif;
+  padding: 1em 3em;
+  line-height:1em;
+  text-decoration: none;
+  display: inline-block;
+  background: $button;
+  cursor: pointer;
+  border:none;
+  color:$white;
+  font-weight: 900;
+  transition: 0.5s ease all;
+  &:hover {
+    background: darken($color: $button, $amount: 20);
+  }
+}
+
+.br {
+  border-radius: 2em 0;
+  font-size: 0.7rem;
+}
+
+
+/* HEADER */
+
+.title > h1 {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 2.9em;
+  text-transform: uppercase;
+}
+
+
+.container {
+background: lighten($color: $dark-grey, $amount: 50);
+width: 95%;
+max-width: 1200px;
+margin: 1.6em auto;
+display: grid;
+gap: 1.6em;
+grid-template-columns: repeat(5, 1fr);
+
+} 
+
+.grid-header {
+margin-top: 1.6rem;
+margin-bottom: 1rem;
+display:flex;
+justify-content: space-between;
+}
+
+.grid-header-title {
+display:flex;
+justify-content: space-around;
+align-items: center;
+
+}
+
+
+.mini-logo{
+width: 30px;
+}
+
+.an {
+width:auto;
+margin: auto;
+display: flex;
+padding: 1.5rem 2rem;
+
+}
+.an > a {
+text-decoration: none;
+margin: 0 0.8rem;
+color: $button-active-blue;
+padding: 0.6rem 1rem;
+background:$link;
+transition: 0.5s all;
+
+&:hover{
+  background-color: darken($color: $link, $amount: 30);
+}
+
+}
+
+.article > h2, p {
+  color: $primary;
+}
+.bg {
+  background: $white !important;
+}
+
+ .container > .header,
+.container > .content,
+.container > .sidebar,
+.container > .footer,
+.container > div {
+  background: $white;
+  padding: 20px;
+} 
+
+ /* aunque pareciera que son 5 columnas, en realida va del 1 al 6  */
+.container .header,
+.container .footer {
+ 
+  grid-column: 1/6;
+  background: $button-active-blue;
+  color: $white;
+} 
+
+/* span nos permite indicar cuantas columnas va abarcar un elemento */
+
+ .container .content {
+  grid-column: span 3;
+}
+
+.container .sidebar {
+  grid-column: span 2;
+
+  background: lighten($color: $dark-grey, $amount: 50);
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .sidebar a > img {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+.container .sidebar a  {
+  text-decoration: none;
+  color:$primary;
+}
+
+.container .sidebar a > h4 {
+  margin:30px auto;
+  text-align: center;
+} 
+
+ .content > .article {
+  padding: 20px;
+  margin-top: 5px;
+  color: lighten($color: $dark-grey, $amount: 40);
+  background: $button-active-blue;
+}
+.content > .article .img-cover {
+  width: 100%;
+}
+
+.content .article > h2,
+.content .article > p,
+.content .article > a,
+.content .article > h4
+{
+  padding: 10px;
+} 
+
+
+
+ div > p {
+  padding: 8px;
+}
+
+.container .post {
+  background: $dark-grey;
+  color: $white;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s ease;
+}
+
+ 
+
+
+.container .post a > p {
+  color: $white;
+}
+
+.container > .post:hover {
+  background-color: lighten($color: $dark-grey, $amount: 20);
+  color: $primary;
+  cursor: pointer;
+} 
+
+/* footer */
+.grid-footer {
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  padding:0.8rem;
+}
+
+.grid-footer > a {
+  text-decoration: none;
+  color: lighten($color: $dark-grey, $amount: 10);
+}
+
+
